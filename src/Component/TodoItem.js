@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 
 const TodoItem = (props) => {
@@ -19,23 +18,11 @@ const TodoItem = (props) => {
     }
   };
   return (
-    <li
-     
-      key={item.id}
-    >
-      <div
-        ref={inputRef}
-        disabled={inputRef}
-       
-        >{item.item}</div>
-       
-        <button
-          onClick={() => removeTodo(item.id)}
-        >
-        
-         remove
-        </button>
-      
+    <li key={item.id}>
+      <div ref={inputRef} disabled={inputRef}>
+        {item.item}
+      </div>
+      <button onClick={() => removeTodo(item.id)}>remove</button>
     </li>
   );
 };

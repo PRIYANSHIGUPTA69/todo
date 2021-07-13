@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodos } from "../redux/reducer";
 
-
 const mapStateToProps = (state) => {
   return {
     todos: state,

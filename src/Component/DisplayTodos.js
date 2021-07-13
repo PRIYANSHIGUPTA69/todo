@@ -27,26 +27,20 @@ const DisplayTodos = (props) => {
   const [sort, setSort] = useState("active");
   return (
     <div className="displaytodos">
-      
       <ul>
-        
-          {props.todos.length > 0 
-            ? props.todos.map((item) => {
-                return (
-                  item.completed === false && (
-                    <TodoItem
-                      key={item.id}
-                      item={item}
-                      removeTodo={props.removeTodo}
-                      
-                    />
-                  )
-                );
-              })
-            : null}
-      
-         
-        
+        {props.todos.length > 0
+          ? props.todos.map((item) => {
+              return (
+                item.completed === false && (
+                  <TodoItem
+                    key={item.id}
+                    item={item}
+                    removeTodo={props.removeTodo}
+                  />
+                )
+              );
+            })
+          : null}
       </ul>
     </div>
   );
